@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1 id="typing-text"></h1>
+        <h2 id="welcome-text"></h2>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>[Brief introduction about yourself, your background, and your interests.]</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1. Include any interesting details or a link to the project if available.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2. Mention technologies used, challenges, or accomplishments.</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>You can reach me at: [your email address]</p>
+        <p>Or find me on social media:</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/in/feiting-yang-211a39224/" target="_blank">LinkedIn</a></li>
+            <li><a href="[GitHub URL]">GitHub</a></li>
+            <!-- Add other social links if desired -->
+        </ul>
+    </section>
+
+    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const text1 = "Hi, I am Feiting Yang";
+            const text2 = "Welcome to my personal website!";
+            const typingText = document.getElementById("typing-text");
+            const welcomeText = document.getElementById("welcome-text");
+            let index = 0;
+    
+            // Function to type the first message
+            function typeFirstMessage() {
+                if (index < text1.length) {
+                    typingText.innerHTML += text1.charAt(index);
+                    index++;
+                    setTimeout(typeFirstMessage, 100); // Adjust speed here
+                } else {
+                    index = 0; // Reset index for the second message
+                    setTimeout(typeSecondMessage, 500); // Add a pause before the second message
+                }
+            }
+    
+            // Function to type the second message
+            function typeSecondMessage() {
+                if (index < text2.length) {
+                    welcomeText.innerHTML += text2.charAt(index);
+                    index++;
+                    setTimeout(typeSecondMessage, 100); // Adjust speed here
+                }
+            }
+    
+            typeFirstMessage(); // Start the typing effect
+        });
+    </script>
+    
+
+</body>
+</html>
+
